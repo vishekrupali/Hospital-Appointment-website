@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - Nitya Clinic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🏥</div>
+            <div>
+                <h1>Nitya Clinic</h1>
+                <p>Dr. Nitya - MBBS &nbsp;|&nbsp; Doctor's Panel</p>
+            </div>
+        </div>
+        <div class="user-menu" id="userMenu">
+            <div class="user-avatar">👨‍⚕️</div>
+            <span class="user-name">Dr. Nitya</span>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h2>Doctor Dashboard</h2>
+        <p>Manage patient appointments</p>
+    </div>
+
+    <div class="main-content">
+        <div class="error-message" id="errorMsg"></div>
+        <div class="success-message" id="successMsg"></div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">📅</div>
+                <div class="stat-value" id="totalCount">0</div>
+                <div class="stat-label">Total Appointments</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">✅</div>
+                <div class="stat-value" id="confirmedCount">0</div>
+                <div class="stat-label">Confirmed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">⏳</div>
+                <div class="stat-value" id="pendingCount">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h3>📋 All Patient Appointments</h3>
+            <table id="appointmentsTable">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Mobile</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="appointmentsBody">
+                </tbody>
+            </table>
+            <div class="empty-state" id="emptyState">
+                <div class="icon">📭</div>
+                <p>No appointments yet. Patients will appear here when they book.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Nitya Clinic | Dr. Nitya (MBBS) | All Rights Reserved</p>
+    </div>
+
+    <script src="js/doctor-dashboard.js"></script>
+</body>
+</html>

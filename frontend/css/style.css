@@ -1,0 +1,743 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%);
+    min-height: 100vh;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar .logo .logo-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.navbar .logo h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar .logo p {
+    color: #90e0ef;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.navbar .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.navbar .nav-links a.active {
+    background: white;
+    color: #0077b6;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+}
+
+.login-box {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.login-box .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.login-box .clinic-badge {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-box .clinic-badge .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0077b6;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 119, 182, 0.1);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 119, 182, 0.4);
+}
+
+.btn-secondary {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+    color: white;
+}
+
+.btn-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(45, 106, 79, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #d00000 0%, #e85d04 100%);
+    color: white;
+}
+
+.btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(208, 0, 0, 0.4);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    background: #ffe0e0;
+    color: #d00000;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
+    border-left: 4px solid #d00000;
+}
+
+.success-message {
+    background: #d0f0e0;
+    color: #2d6a4f;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
+    border-left: 4px solid #2d6a4f;
+}
+
+/* Appointment Page */
+.page-header {
+    background: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    color: #90e0ef;
+    font-size: 14px;
+}
+
+.main-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.appointment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #023e8a;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8f4f8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card h3 .icon {
+    width: 35px;
+    height: 35px;
+    background: #e8f4f8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.doctor-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.doctor-info .doctor-avatar {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    margin: 0 auto 15px;
+}
+
+.doctor-info h4 {
+    color: #023e8a;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.doctor-info .degree {
+    color: #0077b6;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.doctor-info .speciality {
+    color: #666;
+    font-size: 13px;
+}
+
+.doctor-details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.doctor-details .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.doctor-details .detail-item .label {
+    font-weight: 600;
+    color: #023e8a;
+    min-width: 100px;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.time-slot {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.time-slot:hover {
+    border-color: #0077b6;
+    background: #e8f4f8;
+}
+
+.time-slot.selected {
+    background: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    color: white;
+    border-color: #0077b6;
+}
+
+.appointment-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #0077b6;
+    transition: all 0.3s ease;
+}
+
+.appointment-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-item .apt-info h4 {
+    color: #023e8a;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.appointment-item .apt-info p {
+    color: #666;
+    font-size: 13px;
+}
+
+.appointment-item .apt-time {
+    text-align: right;
+}
+
+.appointment-item .apt-time .time {
+    color: #0077b6;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.appointment-item .apt-time .date {
+    color: #666;
+    font-size: 12px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.empty-state .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Doctor Dashboard */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card .stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 15px;
+}
+
+.stat-card .stat-icon.blue {
+    background: #e8f4f8;
+    color: #0077b6;
+}
+
+.stat-card .stat-icon.green {
+    background: #d0f0e0;
+    color: #2d6a4f;
+}
+
+.stat-card .stat-icon.orange {
+    background: #fff3e0;
+    color: #e85d04;
+}
+
+.stat-card .stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #023e8a;
+}
+
+.stat-card .stat-label {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.table-container {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.table-container h3 {
+    color: #023e8a;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background: #f8f9fa;
+    color: #023e8a;
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid #e8f4f8;
+}
+
+table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #333;
+}
+
+table tr:hover {
+    background: #f8f9fa;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pending {
+    background: #fff3e0;
+    color: #e85d04;
+}
+
+.status-badge.confirmed {
+    background: #d0f0e0;
+    color: #2d6a4f;
+}
+
+.status-badge.cancelled {
+    background: #ffe0e0;
+    color: #d00000;
+}
+
+.action-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btns button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.action-btns .confirm-btn {
+    background: #d0f0e0;
+    color: #2d6a4f;
+}
+
+.action-btns .confirm-btn:hover {
+    background: #2d6a4f;
+    color: white;
+}
+
+.action-btns .cancel-btn {
+    background: #ffe0e0;
+    color: #d00000;
+}
+
+.action-btns .cancel-btn:hover {
+    background: #d00000;
+    color: white;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.user-menu .user-avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.user-menu .user-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.user-menu .logout-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.user-menu .logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.footer {
+    background: #023047;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal h3 {
+    color: #023e8a;
+    margin-bottom: 20px;
+}
+
+.modal .confirmation-icon {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.modal .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.modal .detail-row .label {
+    color: #666;
+    font-size: 14px;
+}
+
+.modal .detail-row .value {
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.modal .modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.modal .modal-actions button {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .appointment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

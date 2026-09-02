@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login - Nitya Clinic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🏥</div>
+            <div>
+                <h1>Nitya Clinic</h1>
+                <p>Dr. Nitya - MBBS &nbsp;|&nbsp; General Physician</p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="patient-login.html">Patient Login</a>
+            <a href="doctor-login.html" class="active">Doctor Login</a>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="clinic-badge">
+                <span class="badge">👨‍⚕️ Doctor Login</span>
+            </div>
+            <h2>Doctor's Panel</h2>
+            <p class="subtitle">Restricted access - only for Dr. Nitya</p>
+
+            <div class="error-message" id="errorMsg"></div>
+            <div class="success-message" id="successMsg"></div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login to Dashboard</button>
+            </form>
+
+            <div class="form-footer">
+                <a href="patient-login.html">Are you a patient? Click here</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Nitya Clinic | Dr. Nitya (MBBS) | All Rights Reserved</p>
+    </div>
+
+    <script src="js/doctor-login.js"></script>
+</body>
+</html>

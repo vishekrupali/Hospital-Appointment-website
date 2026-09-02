@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Nitya Clinic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🏥</div>
+            <div>
+                <h1>Nitya Clinic</h1>
+                <p>Dr. Nitya - MBBS &nbsp;|&nbsp; General Physician</p>
+            </div>
+        </div>
+        <div class="user-menu" id="userMenu">
+            <div class="user-avatar">👤</div>
+            <span class="user-name" id="userNameDisplay">Patient</span>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h2>Book Your Appointment</h2>
+        <p>General Consultation & Treatment</p>
+    </div>
+
+    <div class="main-content">
+        <div class="error-message" id="errorMsg"></div>
+        <div class="success-message" id="successMsg"></div>
+
+        <div class="appointment-grid">
+            <div class="card">
+                <h3>
+                    <span class="icon">👨‍⚕️</span>
+                    Consultation Details
+                </h3>
+                
+                <div class="doctor-info">
+                    <div class="doctor-avatar">👨‍⚕️</div>
+                    <h4>Dr. Nitya</h4>
+                    <div class="degree">MBBS (Bachelor of Medicine, Bachelor of Surgery)</div>
+                    <div class="speciality">General Physician & Consultant</div>
+                </div>
+
+                <div class="doctor-details">
+                    <div class="detail-item">
+                        <span class="label">Timing</span>
+                        <span>Mon - Sat: 10:00 AM - 2:00 PM | 5:00 PM - 9:00 PM</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Address</span>
+                        <span>Nitya Clinic, Main Road</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Contact</span>
+                        <span>+91 XXXXX XXXXX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span class="icon">📅</span>
+                    Book Appointment
+                </h3>
+
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="aptDate">Select Date</label>
+                        <input type="date" id="aptDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aptTime">Available Time Slots</label>
+                        <div class="time-slots" id="timeSlots">
+                            <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
+                            <div class="time-slot" data-time="10:30 AM">10:30 AM</div>
+                            <div class="time-slot" data-time="11:00 AM">11:00 AM</div>
+                            <div class="time-slot" data-time="11:30 AM">11:30 AM</div>
+                            <div class="time-slot" data-time="12:00 PM">12:00 PM</div>
+                            <div class="time-slot" data-time="12:30 PM">12:30 PM</div>
+                            <div class="time-slot" data-time="5:00 PM">5:00 PM</div>
+                            <div class="time-slot" data-time="5:30 PM">5:30 PM</div>
+                            <div class="time-slot" data-time="6:00 PM">6:00 PM</div>
+                            <div class="time-slot" data-time="6:30 PM">6:30 PM</div>
+                            <div class="time-slot" data-time="7:00 PM">7:00 PM</div>
+                            <div class="time-slot" data-time="7:30 PM">7:30 PM</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason for Visit</label>
+                        <textarea id="reason" rows="3" placeholder="Briefly describe your health concern (optional)"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div class="card">
+            <h3>
+                <span class="icon">📋</span>
+                My Appointments
+            </h3>
+            <div class="appointment-list" id="appointmentList">
+                <div class="empty-state">
+                    <div class="icon">📋</div>
+                    <p>No appointments booked yet. Book your first appointment above!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="confirmationModal">
+        <div class="modal">
+            <div class="confirmation-icon">✅</div>
+            <h3 style="text-align: center;">Appointment Booked!</h3>
+            <div class="detail-row">
+                <span class="label">Patient</span>
+                <span class="value" id="confirmName"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Date</span>
+                <span class="value" id="confirmDate"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Time</span>
+                <span class="value" id="confirmTime"></span>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal()">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Nitya Clinic | Dr. Nitya (MBBS) | All Rights Reserved</p>
+    </div>
+
+    <script src="js/appointment.js"></script>
+</body>
+</html>
