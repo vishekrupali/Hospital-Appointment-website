@@ -7,7 +7,7 @@ A complete hospital appointment booking system for **Nitya Clinic** by **Dr. Nit
 | Role | Login Page | Credentials |
 |------|-----------|-------------|
 | **Patient** | `patient-login.html` | Any name + 10-digit mobile number (auto-registers) |
-| **Doctor** | `doctor-login.html` | Username: `sachin` / Password: `bhakare123` |
+| **Doctor** | `doctor-login.html` | Username: `Nitya` / Password: `Nitya123` |
 
 ## 📁 Project Structure
 
