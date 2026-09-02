@@ -1,7 +1,7 @@
 {
-  "name": "sharvari-clinic-backend",
+  "name": "Nitya-clinic-backend",
   "version": "1.0.0",
-  "description": "Backend for Sharvari Clinic appointment system",
+  "description": "Backend for Nitya Clinic appointment system",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
